@@ -1,11 +1,16 @@
 function Welcome() {
-  return (
-    <div>
-      <h5>Welcome to the Roster App sports fan!</h5>
-      <h1>Welcome to Astros Baseball Spring Training</h1>
+  const currentHour = new Date().getHours()
+  const message = currentHour < 5 ? "Why are you still up?" 
+  : currentHour < 12 ? "Good Morning" 
+  : currentHour < 18 ? "Good Afternoon" 
+  : "Good Morning"
 
-    </div>
-  );
+  return (
+    <>
+      <p> {message} Sports fans!</p>
+      <h1>Welcome to Astros Baseball Spring Training</h1>
+    </>
+  )
 }
 
 export default Welcome;
